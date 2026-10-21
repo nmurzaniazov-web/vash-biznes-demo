@@ -1,0 +1,352 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <title>Ваш бизнес — пример современного сайта для бизнеса в Уральске</title>
+  <meta name="description" content="Демонстрационный сайт: как может выглядеть сайт кофейни, ресторана, салона красоты, барбершопа, стоматологии или фитнес-клуба в Уральске. Цены в тенге, мобильная версия, WhatsApp и Instagram.">
+  <meta name="robots" content="index, follow">
+  <meta name="theme-color" content="#14110f">
+
+  <!-- Превью ссылки в мессенджерах (WhatsApp, Telegram) -->
+  <meta property="og:type" content="website">
+  <meta property="og:locale" content="ru_KZ">
+  <meta property="og:title" content="Пример сайта для вашего бизнеса">
+  <meta property="og:description" content="Посмотрите, как может выглядеть сайт вашего заведения: кофейня, ресторан, салон красоты, барбершоп, стоматология, фитнес-клуб.">
+  <meta property="og:image" content="https://images.unsplash.com/photo-1501339847302-ac426a4a7cbb?auto=format&fit=crop&w=1200&h=630&q=75">
+
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='16' fill='%2314110f'/%3E%3Ctext x='32' y='43' font-family='Arial' font-weight='700' font-size='30' fill='%23fff' text-anchor='middle'%3EВБ%3C/text%3E%3C/svg%3E">
+
+  <!-- Шрифты с поддержкой кириллицы -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="preconnect" href="https://images.unsplash.com">
+  <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&family=Unbounded:wght@400;500;600&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body data-business="coffee">
+
+  <a class="skip-link" href="#main">Перейти к содержимому</a>
+
+  <!-- ============ ДЕМО-ПЛАШКА ============ -->
+  <div class="demo-bar" role="note">
+    <div class="container demo-bar__inner">
+      <p class="demo-bar__text">
+        <span class="demo-badge">ДЕМО</span>
+        <span>Пример сайта для вашего бизнеса</span>
+      </p>
+      <a class="demo-bar__link js-dev-link" href="#order" target="_blank" rel="noopener">Хочу такой сайт <span data-icon="arrow"></span></a>
+    </div>
+  </div>
+
+  <!-- ============ ШАПКА ============ -->
+  <header class="header" id="header">
+    <div class="container header__inner">
+      <a class="logo" href="#top" aria-label="На главный экран">
+        <span class="logo__mark" data-bind="logoMark">К</span>
+        <span class="logo__text">
+          <span class="logo__name" data-bind="brand">Ваша кофейня</span>
+          <span class="logo__sub" data-bind="logoSub">Уральск</span>
+        </span>
+      </a>
+
+      <nav class="nav" id="nav" aria-label="Основная навигация">
+        <ul class="nav__list">
+          <li><a class="nav__link" href="#features">Преимущества</a></li>
+          <li><a class="nav__link" href="#services" data-bind="navServices">Меню</a></li>
+          <li><a class="nav__link" href="#gallery">Галерея</a></li>
+          <li><a class="nav__link" href="#about">О нас</a></li>
+          <li><a class="nav__link" href="#reviews">Отзывы</a></li>
+          <li><a class="nav__link" href="#faq">Вопросы</a></li>
+          <li><a class="nav__link" href="#contacts">Контакты</a></li>
+        </ul>
+        <a class="btn btn--accent nav__cta js-whatsapp" href="#contacts" target="_blank" rel="noopener">
+          <span data-icon="whatsapp"></span> Написать в WhatsApp
+        </a>
+      </nav>
+
+      <div class="header__actions">
+        <a class="btn btn--accent btn--sm header__cta" href="#contacts">
+          <span data-bind="headerCta">Связаться</span>
+        </a>
+        <button class="burger" id="burger" type="button" aria-label="Открыть меню" aria-expanded="false" aria-controls="nav">
+          <span></span><span></span><span></span>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <main id="main">
+
+    <!-- ============ ПЕРВЫЙ ЭКРАН ============ -->
+    <section class="hero" id="top" aria-labelledby="hero-title">
+      <figure class="hero__media img-frame">
+        <img data-img="hero" src="" alt="" fetchpriority="high">
+      </figure>
+      <div class="hero__shade" aria-hidden="true"></div>
+
+      <div class="container hero__inner swap">
+        <p class="eyebrow eyebrow--light" data-bind="heroEyebrow">Кофейня · Уральск</p>
+        <h1 class="hero__title" id="hero-title" data-bind="heroTitle">Кофе, ради которого хочется проснуться пораньше</h1>
+        <p class="hero__text" data-bind="heroText"></p>
+        <div class="hero__buttons">
+          <a class="btn btn--accent btn--lg js-whatsapp" href="#contacts" target="_blank" rel="noopener">
+            <span data-icon="whatsapp"></span> <span data-bind="heroCta">Заказать</span>
+          </a>
+          <a class="btn btn--glass btn--lg" href="#services" data-bind="heroSecondary">Смотреть меню</a>
+        </div>
+
+        <ul class="hero__stats" data-list="stats"></ul>
+      </div>
+
+      <aside class="hero__card swap" aria-label="Режим работы">
+        <span class="hero__card-dot" aria-hidden="true"></span>
+        <div>
+          <p class="hero__card-label">Работаем</p>
+          <p class="hero__card-value" data-bind="heroHours">Ежедневно 08:00–22:00</p>
+        </div>
+      </aside>
+
+      <a class="hero__scroll" href="#features" aria-label="Прокрутить к преимуществам"><span></span></a>
+    </section>
+
+    <!-- ============ ПРЕИМУЩЕСТВА ============ -->
+    <section class="section" id="features" aria-labelledby="features-title">
+      <div class="container">
+        <div class="section-head reveal">
+          <p class="eyebrow">Почему выбирают нас</p>
+          <h2 class="section-title" id="features-title" data-bind="featuresTitle">Маленькие детали, из которых складывается любимое место</h2>
+        </div>
+        <ul class="features swap" data-list="features"></ul>
+      </div>
+    </section>
+
+    <!-- ============ УСЛУГИ / МЕНЮ ============ -->
+    <section class="section section--tint" id="services" aria-labelledby="services-title">
+      <div class="container">
+        <div class="section-head section-head--row reveal">
+          <div>
+            <p class="eyebrow" data-bind="servicesEyebrow">Меню</p>
+            <h2 class="section-title" id="services-title" data-bind="servicesTitle">Популярное меню</h2>
+          </div>
+          <p class="section-lead" data-bind="servicesLead"></p>
+        </div>
+        <ul class="services swap" data-list="services"></ul>
+        <p class="note"><span data-icon="info"></span> Цены указаны для примера и легко меняются под ваш прайс.</p>
+      </div>
+    </section>
+
+    <!-- ============ ГАЛЕРЕЯ ============ -->
+    <section class="section" id="gallery" aria-labelledby="gallery-title">
+      <div class="container">
+        <div class="section-head section-head--row reveal">
+          <div>
+            <p class="eyebrow">Галерея</p>
+            <h2 class="section-title" id="gallery-title" data-bind="galleryTitle">Атмосфера, которую хочется сохранить</h2>
+          </div>
+          <p class="section-lead">Нажмите на фото, чтобы открыть его крупнее.</p>
+        </div>
+        <ul class="gallery swap" data-list="gallery"></ul>
+      </div>
+    </section>
+
+    <!-- ============ О НАС ============ -->
+    <section class="section section--tint" id="about" aria-labelledby="about-title">
+      <div class="container about">
+        <div class="about__media reveal">
+          <figure class="about__photo img-frame">
+            <img data-img="about" src="" alt="" loading="lazy">
+          </figure>
+          <div class="about__badge swap">
+            <span class="about__badge-num" data-bind="aboutBadgeNum">5</span>
+            <span class="about__badge-text" data-bind="aboutBadgeText">лет работаем для вас</span>
+          </div>
+        </div>
+        <div class="about__content reveal">
+          <p class="eyebrow">О нас</p>
+          <h2 class="section-title" id="about-title" data-bind="aboutTitle">О нас</h2>
+          <div class="about__text swap" data-list="aboutText"></div>
+          <ul class="checklist swap" data-list="aboutPoints"></ul>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ ОТЗЫВЫ ============ -->
+    <section class="section" id="reviews" aria-labelledby="reviews-title">
+      <div class="container">
+        <div class="section-head section-head--row reveal">
+          <div>
+            <p class="eyebrow">Отзывы</p>
+            <h2 class="section-title" id="reviews-title">Что говорят гости</h2>
+          </div>
+          <p class="demo-tag"><span data-icon="info"></span> Демонстрационные примеры отзывов. На вашем сайте будут настоящие отзывы клиентов.</p>
+        </div>
+        <ul class="reviews swap" data-list="reviews"></ul>
+      </div>
+    </section>
+
+    <!-- ============ КОНТАКТЫ ============ -->
+    <section class="section section--tint" id="contacts" aria-labelledby="contacts-title">
+      <div class="container">
+        <div class="section-head reveal">
+          <p class="eyebrow">Контакты</p>
+          <h2 class="section-title" id="contacts-title" data-bind="contactsTitle">Ждём вас в гости</h2>
+        </div>
+
+        <div class="contacts">
+          <div class="contact-card reveal">
+            <ul class="contact-list">
+              <li>
+                <span class="contact-list__icon" data-icon="pin"></span>
+                <div>
+                  <p class="contact-list__label">Адрес</p>
+                  <p class="contact-list__value js-address">г. Уральск, ул. Примерная, 1</p>
+                  <p class="contact-list__hint">Адрес-заглушка для демонстрации</p>
+                </div>
+              </li>
+              <li>
+                <span class="contact-list__icon" data-icon="phone"></span>
+                <div>
+                  <p class="contact-list__label">Телефон</p>
+                  <a class="contact-list__value js-phone" href="#contacts">+7 700 000 00 00</a>
+                  <p class="contact-list__hint">Демонстрационный номер</p>
+                </div>
+              </li>
+              <li>
+                <span class="contact-list__icon" data-icon="clock"></span>
+                <div class="contact-list__grow">
+                  <p class="contact-list__label">График работы</p>
+                  <dl class="schedule swap" data-list="schedule"></dl>
+                </div>
+              </li>
+            </ul>
+
+            <div class="contact-buttons">
+              <a class="btn btn--whatsapp js-whatsapp" href="#contacts" target="_blank" rel="noopener">
+                <span data-icon="whatsapp"></span> WhatsApp
+              </a>
+              <a class="btn btn--instagram js-instagram" href="#contacts" target="_blank" rel="noopener">
+                <span data-icon="instagram"></span> Instagram
+              </a>
+              <a class="btn btn--outline js-phone" href="#contacts">
+                <span data-icon="phone"></span> Позвонить
+              </a>
+            </div>
+          </div>
+
+          <div class="map reveal" aria-label="Место для карты">
+            <div class="map__grid" aria-hidden="true"></div>
+            <div class="map__pin" aria-hidden="true"><span data-icon="pin"></span></div>
+            <div class="map__info">
+              <p class="map__title">Здесь будет карта</p>
+              <p class="map__text">Сюда можно встроить карту 2ГИС или Google Maps с точным адресом заведения.</p>
+              <a class="btn btn--dark btn--sm js-map" href="#contacts" target="_blank" rel="noopener">
+                Открыть Уральск в 2ГИС <span data-icon="arrow"></span>
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ FAQ ============ -->
+    <section class="section" id="faq" aria-labelledby="faq-title">
+      <div class="container faq-wrap">
+        <div class="section-head reveal">
+          <p class="eyebrow">FAQ</p>
+          <h2 class="section-title" id="faq-title">Частые вопросы</h2>
+          <p class="section-lead">Не нашли ответ? Напишите нам в WhatsApp — ответим в течение нескольких минут.</p>
+        </div>
+        <div class="faq swap" data-list="faq"></div>
+      </div>
+    </section>
+
+    <!-- ============ БЛОК ДЛЯ ПРЕДПРИНИМАТЕЛЯ ============ -->
+    <section class="order" id="order" aria-labelledby="order-title">
+      <div class="container order__inner reveal">
+        <div>
+          <p class="eyebrow eyebrow--light">Это демонстрационный сайт</p>
+          <h2 class="order__title" id="order-title">Хотите такой же сайт для своего бизнеса?</h2>
+          <p class="order__text">Подставлю ваше название, фото, цены и контакты, настрою кнопки WhatsApp и Instagram, адрес на карте. Сайт будет удобно открываться с телефона.</p>
+        </div>
+        <div class="order__actions">
+          <a class="btn btn--light btn--lg js-dev-link" href="#order" target="_blank" rel="noopener">
+            <span data-icon="whatsapp"></span> Обсудить сайт
+          </a>
+          <p class="order__hint">Посмотрите другие варианты в переключателе внизу экрана</p>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- ============ ФУТЕР ============ -->
+  <footer class="footer">
+    <div class="container footer__grid">
+      <div class="footer__brand">
+        <a class="logo logo--light" href="#top" aria-label="Наверх">
+          <span class="logo__mark" data-bind="logoMark">К</span>
+          <span class="logo__text">
+            <span class="logo__name" data-bind="brand">Ваша кофейня</span>
+            <span class="logo__sub" data-bind="logoSub">Уральск</span>
+          </span>
+        </a>
+        <p class="footer__text" data-bind="footerText"></p>
+        <div class="footer__social">
+          <a class="social js-whatsapp" href="#contacts" target="_blank" rel="noopener" aria-label="WhatsApp"><span data-icon="whatsapp"></span></a>
+          <a class="social js-instagram" href="#contacts" target="_blank" rel="noopener" aria-label="Instagram"><span data-icon="instagram"></span></a>
+          <a class="social js-phone" href="#contacts" aria-label="Позвонить"><span data-icon="phone"></span></a>
+        </div>
+      </div>
+
+      <nav class="footer__col" aria-label="Разделы сайта">
+        <p class="footer__title">Разделы</p>
+        <ul>
+          <li><a href="#features">Преимущества</a></li>
+          <li><a href="#services" data-bind="navServices">Меню</a></li>
+          <li><a href="#gallery">Галерея</a></li>
+          <li><a href="#about">О нас</a></li>
+          <li><a href="#faq">Вопросы</a></li>
+        </ul>
+      </nav>
+
+      <div class="footer__col">
+        <p class="footer__title">Контакты</p>
+        <ul>
+          <li class="js-address">г. Уральск, ул. Примерная, 1</li>
+          <li><a class="js-phone" href="#contacts">+7 700 000 00 00</a></li>
+          <li data-bind="footerHours">Ежедневно 08:00–22:00</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="container footer__bottom">
+      <p>© <span id="year">2026</span> Ваш бизнес. Демонстрационный сайт: названия, цены, отзывы и контакты являются примерами.</p>
+      <p>Фото: <a href="https://unsplash.com" target="_blank" rel="noopener">Unsplash</a></p>
+    </div>
+  </footer>
+
+  <!-- ============ ПЕРЕКЛЮЧАТЕЛЬ ТИПА БИЗНЕСА ============ -->
+  <div class="switcher" id="switcher">
+    <p class="switcher__label" id="switcher-label"><span class="demo-badge">ДЕМО</span> Тип бизнеса</p>
+    <div class="switcher__list" role="radiogroup" aria-labelledby="switcher-label" data-list="switcher"></div>
+  </div>
+
+  <!-- ============ ПРОСМОТР ФОТО ============ -->
+  <div class="lightbox" id="lightbox" role="dialog" aria-modal="true" aria-label="Просмотр фотографии" hidden>
+    <button class="lightbox__btn lightbox__close" type="button" aria-label="Закрыть"><span data-icon="close"></span></button>
+    <button class="lightbox__btn lightbox__prev" type="button" aria-label="Предыдущее фото"><span data-icon="chevronLeft"></span></button>
+    <figure class="lightbox__figure">
+      <img class="lightbox__img" src="" alt="">
+      <figcaption class="lightbox__caption"></figcaption>
+    </figure>
+    <button class="lightbox__btn lightbox__next" type="button" aria-label="Следующее фото"><span data-icon="chevronRight"></span></button>
+  </div>
+
+  <noscript>
+    <div class="noscript">Для работы переключателя и меню включите JavaScript в браузере.</div>
+  </noscript>
+
+  <script src="js/script.js"></script>
+</body>
+</html>
