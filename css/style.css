@@ -743,8 +743,8 @@ a.contact-list__value:hover { color: var(--accent); }
       linear-gradient(0deg, rgba(12, 10, 8, 0.92) 0%, rgba(12, 10, 8, 0.55) 55%, rgba(12, 10, 8, 0.35) 100%);
   }
   .hero__buttons .btn { width: 100%; }
-  .hero__stats { margin-top: 40px; }
-  .hero__stats li { min-width: 0; padding-right: 14px; margin-right: 14px; }
+  .hero__stats { margin-top: 40px; flex-wrap: nowrap; }
+  .hero__stats li { flex: 1 1 0; min-width: 0; padding-right: 12px; margin-right: 12px; }
   .hero__stat-num { font-size: 1.15rem; white-space: nowrap; }
   .hero__stat-label { font-size: 12px; }
   .hero__scroll { display: none; }
