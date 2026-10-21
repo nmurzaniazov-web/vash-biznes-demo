@@ -13,13 +13,13 @@
 const SITE = {
   phoneDisplay: '+7 700 000 00 00',   // как номер выглядит на сайте
   phone: '+77000000000',              // номер для кнопки «Позвонить»
-  whatsapp: '77000000000',            // номер WhatsApp без «+» и пробелов
+  whatsapp: '77712368099',            // номер WhatsApp без «+» и пробелов
   instagram: 'https://www.instagram.com/', // ссылка на профиль Instagram
   address: 'г. Уральск, ул. Примерная, 1',
   mapLink: 'https://2gis.kz/uralsk',  // ссылка на карту (2ГИС или Google Maps)
 
   // Ваши контакты как разработчика — для кнопок «Хочу такой сайт»
-  developerWhatsapp: '77000000000',
+  developerWhatsapp: '77712368099',
   developerMessage: 'Здравствуйте! Посмотрел(а) демо-сайт и хочу такой же для своего бизнеса.',
 
   defaultBusiness: 'coffee',          // какой тип бизнеса показывать первым
